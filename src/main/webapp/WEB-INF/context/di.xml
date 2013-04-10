@@ -4,6 +4,14 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
 
+    <bean id="oprosManager" class="com.rc.saualnama.opros.manager.OprosManagerImpl">
+        <property name="oprosRepository" ref="oprosRepository" />
+    </bean>
+
+    <bean id="oprosRepository" class="com.rc.saualnama.opros.repository.OprosRepositoryImpl">
+        <property name="jdbcTemplate" ref="jdbcTemplateStandard" />
+    </bean>
+
     <bean id="questionManager" class="com.rc.saualnama.question.manager.QuestionManagerImpl" scope="prototype">
         <property name="questionRepository" ref="questionRepository" />
     </bean>

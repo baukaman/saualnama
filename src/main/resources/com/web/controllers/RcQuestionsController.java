@@ -53,7 +53,7 @@ public class RcQuestionsController {
     public String printWelcome(ModelMap model){
         UserDetails userDetails = (UserDetails) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
         String name=userDetails.getUsername();
-         model.addAttribute("message","Yoppa hello "+name+" !!!");
+        model.addAttribute("message","Yoppa hello "+name+" !!!");
         return "welcome";
     }
 
